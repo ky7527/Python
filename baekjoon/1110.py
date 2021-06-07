@@ -1,16 +1,11 @@
-# 더하기 사이클
-
-n = int(input())  # 68
-num = n
-cnt = 0           # 사이클 수
-
-while True :
-    a = n // 10   # 6
-    b = n % 10    # 8
-    c = (a+b) % 10  # 6 + 8 = 1"4"
-    num = (b*10) + c # 80 + 4 = 84
-
-    cnt = cnt + 1   # 사이클 수 +1
+n = num = int(input())
+count = 0
+while True:
+    ten = n // 10
+    one = n % 10
+    total = ten + one
+    count += 1
+    n = int(str(n % 10) + str(total % 10))
     if(num == n):
         break
-print(cnt)
+print(count)
