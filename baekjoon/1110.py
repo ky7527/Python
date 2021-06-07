@@ -1,3 +1,4 @@
+# 더하기 사이클
 n = num = int(input())
 count = 0
 while True:
